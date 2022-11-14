@@ -199,6 +199,14 @@ body.active {
   color: var(--orange);
 }
 
+.has-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.has-scrollbar::-webkit-scrollbar-button {
+  width: 40px;
+}
+
 /* header  */
 .header {
   position: fixed;
@@ -531,4 +539,32 @@ body.active {
   text-transform: uppercase;
   padding: 6px 10px;
   border-radius: 4px;
+}
+
+/* gallery */
+.gallery {
+  padding: var(--section-padding) 0;
+}
+
+.gallery-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin: -15px;
+  overflow-x: auto;
+  padding-bottom: 15px;
+  padding-inline: 15px;
+  scroll-snap-type: inline mandatory;
+}
+
+.gallery-list li {
+  min-width: 95%;
+  scroll-snap-align: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.2);
 }
