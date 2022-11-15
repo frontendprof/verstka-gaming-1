@@ -48,6 +48,7 @@
   --polygon-2: polygon(0 0, 100% 0%, 82% 100%, 0% 100%);
   --polygon-3: polygon(0 0, 100% 0%, 100% 100%, 18% 100%);
   --polygon-4: polygon(96% 0, 100% 36%, 100% 100%, 4% 100%, 0 66%, 0 0);
+  --polygon-5: polygon(75% 0, 100% 25%, 100% 100%, 25% 100%, 0 75%, 0 0);
 }
 
 /* reset css */
@@ -648,4 +649,136 @@ body.active {
 
 .team .btn-primary {
   margin-inline: auto;
+}
+
+/* gears section */
+.gears {
+  padding: var(--section-padding) 0;
+}
+
+.gears-list {
+  display: grid;
+  gap: 50px;
+}
+
+.gears-card .card-banner {
+  position: relative;
+  background: url('../assets/images/gears-card-bg.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  aspect-ratio: 2/1.7;
+  display: grid;
+  place-items: center;
+  margin-bottom: 30px;
+}
+
+.gears .card-banner a {
+  width: 100%;
+}
+
+.gears .card-banner img {
+  width: 45%;
+  margin-inline: auto;
+}
+
+.share,
+.card-time-wrapper {
+  position: absolute;
+  color: var(--orange);
+}
+
+.share {
+  top: 25%;
+  right: 8%;
+  font-size: 20px;
+  border: 2px solid var(--onyx);
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transition: var(--transition-1);
+}
+
+.share:is(:hover, :focus) {
+  border-color: var(--orange);
+}
+
+.card-time-wrapper {
+  top: 2%;
+  right: 5%;
+  font-family: var(--ff-oswald);
+  font-size: var(--fs-9);
+  font-weight: var(--fw-500);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-time-wrapper ion-icon {
+  font-size: 16px;
+  --ionicon-stroke-width: 50px;
+}
+
+.gears .card-content {
+  color: var(--white);
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.gears-card:is(.card-title, .card-prize) {
+  font-family: var(--ff-oswald);
+  font-size: var(--fs-5);
+  font-weight: 700;
+}
+
+.gears-card .card-title {
+  margin-bottom: 5px;
+}
+
+.gears-card .card-subtitle {
+  color: var(--light-gray);
+  font-size: var(--fs-8);
+}
+
+.gears .card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.gears-card .btn {
+  padding: 18px 20px;
+}
+
+.gears-card .btn-primary {
+  font-size: var(--fs-7);
+  padding-block: 15px;
+}
+
+.gears-card .btn-primary ion-icon {
+  font-size: 20px;
+  --ionicon-stroke-width: 80px;
+}
+
+.gears-card .card-btn {
+  clip-path: var(--polygon-5);
+  background-color: var(--raisin-black-1);
+  color: var(--orange);
+}
+
+.gears-card .card-btn ion-icon {
+  --ionicon-stroke-width: 50px;
+}
+
+.gears-card .card-btn:is(:hover, :focus) {
+  background-color: var(--orange);
+  color: var(--white);
 }
