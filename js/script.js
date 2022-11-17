@@ -19,3 +19,12 @@ for (let elem of navElemArr) {
     elemToggleFunc(document.body);
   });
 }
+
+const goTopBtn = document.querySelector('.go-top');
+window.addEventListener('scroll', function () {
+  if (this.scrollY >= 800) {
+    goTopBtn.classList.add('active');
+  } else {
+    goTopBtn.classList.remove('active');
+  }
+});
